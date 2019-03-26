@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.5em;
+}
+
+.slider{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+
+.slides{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.4s ease-in;
+}
+
+.slides.current{
+    opacity: 1;
+}
+
+.slides .content{
+    color: #333;
+    background-color: rgba(255,255,255,0.8);
+    width: 600px;
+    position: absolute;
+    bottom: 50px;
+    left: -625px;
+    padding-left: 25px;
+    transition: all 0.4s ease-in;
+}
+
+.slides.current .content{
+    left: 0;
+}
+
+.slides .content h1{
+    margin-bottom: 25px;
+}
+
+.arrows button#next{
+    right: 15px;
+}
+
+.arrows button#prev{
+    left: 15px;
+}
+
+.arrows button{
+    position: absolute;
+    top: 50%;
+    background-color: transparent;
+    border:none;
+    cursor: pointer;
+    color: #fff;
+    font-size: 5em;
+    outline: none;
+}
+
+
+
+.slides:first-child{
+    background: url(images/image1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.slides:nth-child(2){
+    background: url(images/image2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.slides:nth-child(3){
+    background: url(images/image3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+}
+
+.slides:nth-child(4){
+    background: url(images/image4.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.slides:nth-child(5){
+    background: url(images/image5.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
