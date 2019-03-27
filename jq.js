@@ -8,8 +8,10 @@ const nextSlide = ()=>{
     curr.removeClass('current');
     if((curr.index() + 1) < all.length){
         curr.next().addClass('current');
+        circle.eq(curr.index()+1).addClass('active').siblings().removeClass('active');
     } else {
-        $('.slides').first().addClass('current');
+        all.eq(0).addClass('current');
+        circle.eq(0).addClass('active').siblings().removeClass('active');
     }
 }
 const prevSlide = ()=>{
@@ -17,8 +19,12 @@ const prevSlide = ()=>{
     curr.removeClass('current');
     if((curr.index() + 1) != 1){
         curr.prev().addClass('current');
+        
+        circle.eq(curr.index()-1).addClass('active').siblings().removeClass('active');
     } else {
-        $('.slides').last().addClass('current');
+        const last = all.length - 1;
+        all.eq(last).addClass('current');
+        circle.eq(last).addClass('active').siblings().removeClass('active');
     }
 }
 
