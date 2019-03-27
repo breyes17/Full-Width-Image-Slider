@@ -47,6 +47,8 @@ body{
     margin-bottom: 25px;
 }
 
+/* arrow */
+
 .arrows button#next{
     right: 15px;
 }
@@ -66,6 +68,37 @@ body{
     outline: none;
 }
 
+/* circles */
+
+.circles{
+    position: absolute;
+    top: 25px;
+    left: 50%;
+}
+
+.circles .circle-btn{
+    width: 20px;
+    height: 20px;
+    border: 1px solid #fff;
+    display: inline-block;
+    margin-right: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: transparent;
+    transition: background-color 0.2s ease-in;
+}
+
+.circles .circle-btn:last-child{
+    margin-right: 0;
+}
+
+.circles .circle-btn:hover{
+    background-color: #fff;
+}
+
+.circles .circle-btn.active{
+    background-color: #fff;
+}
 
 
 .slides:first-child{
